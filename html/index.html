@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scoreboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Optional: Add favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="scoreboard" style="display: none;">
+        <header id="header">
+            <img src="https://i.postimg.cc/j2xC21XZ/cityofwoodland.png" alt="Server Logo" class="logo-left">
+            <h1>City of Woodland RP</h1>
+            <img src="https://i.postimg.cc/j2xC21XZ/cityofwoodland.png" alt="Server Logo" class="logo-right">
+        </header>
+
+        <main id="content">
+            <section class="stat">
+                <span class="emoji">👥</span>
+                <strong>Players Online:</strong> <span id="playerCount">0</span>
+            </section>
+            <section class="stat">
+                <span class="emoji">👮‍♂️</span>
+                <strong>Police On Duty:</strong> <span id="policeCount">0</span>
+            </section>
+            <section class="stat">
+                <span class="emoji">👨‍⚕️</span>
+                <strong>Medics On Duty:</strong> <span id="medicCount">0</span>
+            </section>
+            <section class="stat">
+                <span class="emoji">🚖</span>
+                <strong>Taxis On Duty:</strong> <span id="taxiCount">0</span>
+            </section>
+            <section class="stat">
+                <span class="emoji">🏛️</span>
+                <strong>Municipal On Duty:</strong> <span id="municipalCount">0</span>
+            </section>
+
+            <section class="heists">
+                <h2>🚨 Active Heists</h2>
+                <ul id="heistsList">
+                    <!-- Dynamically populated -->
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <button id="closeButton">Close</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
