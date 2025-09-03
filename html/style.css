@@ -1,8 +1,9 @@
 body {
     font-family: Arial, sans-serif;
     color: #fff;
-    background-color: transparent; /* Transparent background */
+    background-color: transparent;
 }
+
 @keyframes flyInFromTop {
     0% {
         transform: translateY(-100vh);
@@ -18,8 +19,8 @@ body {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
-    border: 2px solid #e46600; /* Orange border */
-    background-color: rgba(0, 0, 0, 0.85); /* Dark semi-transparent background */
+    border: 2px solid #4CAF50; /* Woodland green border */
+    background-color: rgba(17, 17, 17, 0.85); /* Deep black semi-transparent */
     border-radius: 10px;
     padding: 20px;
     position: relative;
@@ -37,12 +38,12 @@ body {
     flex: 1;
     margin: 0;
     font-size: 24px;
-    color: #fff; /* Text color */
-    text-shadow: 
-        1px 1px 0 #ff0000,  
-        -1px -1px 0 #ff0000,
-        1px -1px 0 #ff0000,
-        -1px 1px 0 #ff0000; /* Red outline around text */
+    color: #fff;
+    text-shadow:
+        1px 1px 0 #4CAF50,
+        -1px -1px 0 #4CAF50,
+        1px -1px 0 #4CAF50,
+        -1px 1px 0 #4CAF50; /* Green outline around text */
 }
 
 .logo-left, .logo-right {
@@ -64,12 +65,12 @@ body {
 .section .emoji {
     font-size: 25px;
     margin-right: 11px;
-    line-height: 25px; /* Align emoji with text */
+    line-height: 25px;
 }
 
 .section p {
     margin: 0;
-    line-height: 23px; /* Align text with emoji */
+    line-height: 23px;
 }
 
 #heistsList {
@@ -82,7 +83,7 @@ body {
     margin: 0 auto;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #333;
+    background-color: #4CAF50; /* Woodland green */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -90,5 +91,5 @@ body {
 }
 
 #closeButton:hover {
-    background-color: #ff0000; /* Red on hover */
+    background-color: #81C784; /* Lighter green on hover */
 }
