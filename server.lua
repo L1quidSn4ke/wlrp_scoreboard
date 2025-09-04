@@ -15,6 +15,7 @@ end)
 CreateThread(function()
     while true do
         Wait(30000) -- Update interval: 30 seconds
+        exports.sg_utils:GetPoliceCount(true) -- true for on duty
         TriggerEvent('scoreboard:updateHeists')
     end
 end)
