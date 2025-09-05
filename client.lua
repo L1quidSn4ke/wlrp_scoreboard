@@ -1,5 +1,4 @@
--- client.lua
-
+local QBCore = exports['qb-core']:GetCoreObject()
 local isScoreboardOpen = false
 
 -- Function to open the scoreboard
@@ -7,6 +6,14 @@ local function openScoreboard()
     SetNuiFocus(true, true)
     SendNUIMessage({ type = "open" })
     isScoreboardOpen = true
+
+    -- Request updated heist data when scoreboard is opened
+    QBCore.Functions.TriggerCallback('scoreboard:getHeists', function(heists)
+        SendNUIMessage({
+            type = "updateHeists",
+            data = heists
+        })
+    end)
 end
 
 -- Function to close the scoreboard
