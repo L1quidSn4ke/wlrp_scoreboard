@@ -1,8 +1,6 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
--- Server event to update active heists
-RegisterServerEvent('scoreboard:updateHeists')
-AddEventHandler('scoreboard:updateHeists', function()
+RegisterServerEvent('scoreboard:updateHeists', function()
     local heists = {} -- List of active heists (replace with actual logic)
 
     -- TODO: Add logic here to populate 'heists' based on current game state
