@@ -1,19 +1,29 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
-RegisterServerEvent('scoreboard:updateHeists', function()
-    local heists = {} -- List of active heists (replace with actual logic)
+-- Function to gather and broadcast heist data
+local function UpdateHeists()
+    local heists = {}
+    
+--Example logic: Replace with actual heist tracking
+    --[[local ondutyCops = exports.sg_utils:GetPoliceCount(true)
 
-    -- TODO: Add logic here to populate 'heists' based on current game state
-    -- Example: Check active robberies, store locations, etc.
+    for id, data in pairs(ActiveHeists or {}) do
+        local statusColor = "red"
+        if ondutyCops >= data.requiredcops then
+            statusColor = "green"
+        end
+
+        table.insert(heists, {
+            location = data.label,
+            status = statusColor,
+            requiredCops = data.requiredcops
+        })]]
+    end
 
     TriggerClientEvent('scoreboard:sendHeists', -1, heists)
-end)
+end
 
--- Periodic update every 30 seconds
-CreateThread(function()
-    while true do
-        Wait(30000) -- Update interval: 30 seconds
-        exports.sg_utils:GetPoliceCount(true) -- true for on duty
-        TriggerEvent('scoreboard:updateHeists')
-    end
+-- Event-based trigger (e.g., manual refresh or menu open)
+RegisterServerEvent('scoreboard:updateHeists', function()
+    UpdateHeists()
 end)
